@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<title>ansh's webpage</title>
+<link rel="stylesheet" href="main.css">
+
+<head>
+   <link
+       rel="stylesheet"
+       href="https://pyscript.net/releases/2023.11.1/core.css"
+   />
+   <script
+       type="module"
+       src="https://pyscript.net/releases/2023.11.1/core.js"
+   ></script>
+   <py-config>
+       packages = ["matplotlib", "pandas","networkx","numpy"]
+   </py-config>
+</head>
+<body>
+   <section id="Home">
+        <h1>Welcome to text summariser</h1>
+   </section>
+   <section id="text">
+   <section id="tf" class="container">
+   <h1>TF-IDF</h1>
+   <div>A function to generate a summary that takes a text parameter and an n parameter (number of sentences in summary). The function <span>tokenizes the text</span> into individual sentences and <span>calculates term frequency</span>calculates term frequency of each word in a sentence.<span>TermFrequency=no of times word appears in a document</span> and then it calculates <span>score of each sentence</span> by summing the term frequency of each word in the sentence.Then we <span>select the top n</span> no of lines having highest scores and display them as summary.      </div>
+   </section>
+   <section id="lsa" class="container">
+   <h1>LSA</h1>
+   <div>The basic intuition behind the use of LSA in text summarization is that words that usually occur in related contexts are also related in the same singular space. LSA transforms sentence vectors from a term-space of non-orthogonal features to a concept-space of <span>lower dimensionality</span> with an orthogonal basis. This is done by performing <span>singular value decomposition</span> of term sentence matrix A. This gives us three matrices U, V and Σ </div>
+   </section>
+   <section id="textrank" class="container">
+   <h1>TextRank</h1>
+   <div>TextRank is an unsupervised <span>graph-based algorithm</span> for extractive text summarization and keyword extraction. First a <span>cosine similarity matrix</span> is constructed between each sentences and <span>each sentence is represented as nodes in a graph</span> , with edges representing relationships based on cosine similarity. The algorithm assigns weights to these edges and applies the <span>PageRank algorithm</span> to iteratively update the importance scores of nodes. In the context of extractive summarization, <span>sentences with higher importance scores </span>  are selected to form the summary.</div>
+   </section>
+   </section>
+
+   <section id="formmain">
+   <section id="formtext">
+
+   </section>
+
+   </section>
+   <section id="formalgo">
+   <form onsubmit="return false">
+      <div><h2>Enter Your Text Here</h2></div>
+      <input type="text" id="DATA" name="DATA" placeholder="str1">
+      <select name="model" id="model">
+          <option value="TF-IDF">TF-IDF</option>
+          <option value="LSA">LSA</option>
+          <option value="TEXT-RANK">TEXT RANK</option>
+
+      </select>
+      <input py-click="mainfxn" type="submit" id="btn-form" value="submit">
+
+  </form>
+  </section>
+
+  <p>OUTPUT:</p>
+  <p>YOUR INPUT TEXT:</p>
+  <p id="output1"></p>
+  <p id="output2"></p>
+  <p>YOUR CHOSEN MODEL:</p>
+  <p id="output3"></p>
+  <p>YOUR TEXT SUMMARIZATION:</p>
+
+
+  <script type="py" src="main1.py" >
+  
+  </script>
+   
+</body>
+
+
+</html>

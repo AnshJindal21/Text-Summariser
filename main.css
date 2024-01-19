@@ -1,0 +1,94 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #090000;
+    color:#fff;
+}
+#text{
+    display: flex;
+    flex-direction: row;
+    padding:20px 1%;
+
+}
+.container{
+    margin:0px 10px 0px 10px;
+    padding: 10px 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: aqua;
+    border-radius: 20px;
+}
+#Home{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+h1{
+    font-size: 18px;
+}
+#Home h1{
+    font-size: 25px;
+}
+#formmain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#formtext{
+    text-align: center;
+    width: 50%;
+}
+#formalgo h2{
+    text-align: center;
+}
+#formalgo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top:40px;
+}
+form input{
+    margin-top: 20px;
+    padding: 5px 5px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    background-color: #090000;
+    color: white;
+}
+form input:hover{
+    background-color: aqua;
+    color: #090000;
+}
+span{
+    font-weight: 800;
+    color: rgb(221, 19, 19);
+}
+form{
+    height: 340px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 10px;
+    justify-content: space-between;
+    
+}
+#DATA{
+    width: 60%;
+    height:70%;
+}
+#model{
+    margin-top: 20px;
+    padding: 5px 5px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    background-color: #fcf8f8;
+    color: rgb(10, 10, 10);
+}
+#model:hover{
+    background-color: aqua;
+    color: #090000;
+}
